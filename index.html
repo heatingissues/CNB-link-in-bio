@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Stream MOKSH by Aviral Dwivedi on Spotify, Apple Music, YouTube Music, JioSaavn, and iTunes Store."
+  />
+  <title>AVIRAL DWIVEDI - PROJECT</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --color-text: #0d0d0d;
+      --color-surface: #e7e7e7;
+      --color-border: #8d8d8d;
+      --color-border-strong: #0d0d0d;
+      --color-focus: #000000;
+      --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --container-width: min(100%, 400px);
+      --space-page-x: 28px;
+      --space-page-y-top: 64px;
+      --space-page-y-bottom: 56px;
+      --space-cover-bottom: 26px;
+      --space-heading-gap: 5px;
+      --space-heading-bottom: 26px;
+      --space-link-x: 0;
+      --space-link-y: 17px;
+      --space-link-gap: 10px;
+      --radius-focus: 6px;
+      --font-size-body: clamp(1.125rem, 0.9rem + 0.8vw, 1.3125rem);
+      --font-size-title: clamp(1.125rem, 0.9rem + 0.8vw, 1.3125rem);
+      --transition-fast: 120ms ease;
+      --motion-enter: 500ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: var(--space-page-y-top) var(--space-page-x) var(--space-page-y-bottom);
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-family: var(--font-family-base);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .page {
+      width: var(--container-width);
+    }
+
+    .cover {
+      margin: 0 0 var(--space-cover-bottom);
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+    }
+
+    .cover__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero {
+      margin-bottom: var(--space-heading-bottom);
+      text-align: center;
+    }
+
+    .hero__title,
+    .hero__artist {
+      margin: 0;
+      font-size: var(--font-size-title);
+    }
+
+    .hero__title {
+      font-weight: 500;
+      line-height: 0.95;
+      letter-spacing: -0.045em;
+    }
+
+    .hero__artist {
+      margin-top: var(--space-heading-gap);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 0.01em;
+    }
+
+    .platforms {
+      border-top: 1px solid var(--color-border-strong);
+    }
+
+    .platforms__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .platforms__item {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .platform-link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-link-gap);
+      padding: var(--space-link-y) var(--space-link-x);
+      color: inherit;
+      text-decoration: none;
+      font-size: var(--font-size-body);
+      font-weight: 500;
+      transition:
+        opacity var(--transition-fast),
+        color var(--transition-fast);
+    }
+
+    .platform-link:focus-visible {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 4px;
+      border-radius: var(--radius-focus);
+    }
+
+    .platform-link:hover .platform-link__cta,
+    .platform-link:focus-visible .platform-link__cta {
+      background: var(--color-text);
+      color: var(--color-surface);
+    }
+
+    .platform-link__icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+
+    .platform-link__label {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .platform-link__cta {
+      flex-shrink: 0;
+      padding: 5px 14px;
+      border: 1.5px solid var(--color-text);
+      background: transparent;
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition:
+        background var(--transition-fast),
+        color var(--transition-fast);
+    }
+
+    @keyframes up {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .page > * {
+      animation: up var(--motion-enter) both;
+    }
+
+    .page > *:nth-child(1) {
+      animation-delay: 40ms;
+    }
+
+    .page > *:nth-child(2) {
+      animation-delay: 130ms;
+    }
+
+    .page > *:nth-child(3) {
+      animation-delay: 260ms;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <figure class="cover">
+      <img
+        class="cover__image"
+        src="./compressedImage.jpg"
+        alt="Cover art for MOKSH by Aviral Dwivedi"
+        width="500"
+        height="500"
+        loading="eager"
+        decoding="async"
+      />
+    </figure>
+
+    <header class="hero">
+      <h1 class="hero__title">MOKSH</h1>
+      <p class="hero__artist">Aviral Dwivedi</p>
+    </header>
+
+    <nav class="platforms" aria-label="Streaming platforms">
+      <ul class="platforms__list">
+        <li class="platforms__item">
+          <a
+            class="platform-link"
+            href="https://open.spotify.com/album/6D5M2EqlIQKRO4FDWBMgYi"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open MOKSH on Spotify"
+          >
+            <img
+              class="platform-link__icon"
+              src="logos/spotify.svg"
+              alt=""
+              width="22"
+              height="22"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="platform-link__label">Spotify</span>
+            <span class="platform-link__cta" aria-hidden="true">Stream</span>
+          </a>
+        </li>
+
+        <li class="platforms__item">
+          <a
+            class="platform-link"
+            href="https://music.apple.com/in/album/moksh-single/1888420015"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open MOKSH on Apple Music"
+          >
+            <img
+              class="platform-link__icon"
+              src="logos/apple-music.svg"
+              alt=""
+              width="22"
+              height="22"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="platform-link__label">Apple Music</span>
+            <span class="platform-link__cta" aria-hidden="true">Stream</span>
+          </a>
+        </li>
+
+        <li class="platforms__item">
+          <a
+            class="platform-link"
+            href="https://music.youtube.com/playlist?list=OLAK5uy_lIgs2thtvfR4hFyqEvsNprgaDOYiO1mJY&amp;si=ehT4x6qS-R5opJ4Z"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open MOKSH on YouTube Music"
+          >
+            <img
+              class="platform-link__icon"
+              src="logos/youtube-music.svg"
+              alt=""
+              width="22"
+              height="22"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="platform-link__label">YouTube Music</span>
+            <span class="platform-link__cta" aria-hidden="true">Stream</span>
+          </a>
+        </li>
+
+        <li class="platforms__item">
+          <a
+            class="platform-link"
+            href="https://www.jiosaavn.com/album/moksh/aWeRLjgb25w_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open MOKSH on JioSaavn"
+          >
+            <img
+              class="platform-link__icon"
+              src="logos/jiosaavn.svg"
+              alt=""
+              width="22"
+              height="22"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="platform-link__label">JioSaavn</span>
+            <span class="platform-link__cta" aria-hidden="true">Stream</span>
+          </a>
+        </li>
+
+        <li class="platforms__item">
+          <a
+            class="platform-link"
+            href="https://music.apple.com/in/album/moksh-single/1888420015"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open MOKSH on iTunes Store"
+          >
+            <img
+              class="platform-link__icon"
+              src="logos/logo_itunes_onlight.svg"
+              alt=""
+              width="22"
+              height="22"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="platform-link__label">iTunes Store</span>
+            <span class="platform-link__cta" aria-hidden="true">Download</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </main>
+</body>
+</html>
+Git#ubformusic@994
